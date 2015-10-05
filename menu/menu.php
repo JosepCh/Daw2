@@ -11,31 +11,38 @@
 <body>
 
 <?php 
-$lang = "es";
+$lang = "en";
 $menu = array(
 	"titulo"=>array(
 		"es"=>"MathDice",
-		"eng"=>"MathDice"
+		"en"=>"MathDice"
 		),
 		"inicio"=>array(
 		  "es"=>"Inicio",
-		  "eng"=>"Home"
+		  "en"=>"Home"
 		  ),
 	"juego"=>array(
 		"es"=>"Juego",
-		"eng" =>"Game",
+		"en" =>"Game",
 		"submenu"=>array(
 			"opciones"=>array(
-				"eng"=>"Options",
-				"es"=>"Opciones",
-				"op1"=>"Dificultad Baja",
-				"op2"=>"Dificultad Media",
-				"op3"=>"Dificultad Alta"
+				"op1"=>array(
+					"en"=>"Low Difficulty",
+					"es"=>"Dificultad Baja"
+					),
+				"op2"=>array(
+					"en"=>"Medium Difficulty",
+					"es"=>"Dificultad Media"
+					),
+				"op3"=>array(
+					"en"=>"High Difficulty",
+					"es"=>"Dificultad Alta"
+					),
 				)
 			)
 		),
 	"instrucciones"=>array(
-		"eng"=>"Instructions",
+		"en"=>"Instructions",
 		"es"=>"Instrucciones"
 		)
 	);
@@ -49,20 +56,26 @@ $menu = array(
     	foreach($menu as $valor=>$key){
     	}
     	?>
-      <a class="navbar-brand" href="#"><?php $menu?></a>
+      <a class="navbar-brand" href="#"><?php print_r($menu['titulo'][$lang]) ?></a>
     </div>
     <div>
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+        <li class="active"><a href="#"><?php print_r($menu['inicio'][$lang]) ?></a></li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php print_r($menu['juego'][$lang]) ?> <span class="caret"></span></a>
+        <?php
+    					if(isset($menu['juego']['submenu'])!=null){
+    						foreach($menu['juego']['submenu'] as $opt=>$key2){
+    					}
+    					}
+    						?>
+    				  
           <ul class="dropdown-menu">
-            <li><a href="#">Page 1-1</a></li>
+            <li><a href="#"><?php print_r($opt) ?></a></li>
             <li><a href="#">Page 1-2</a></li>
             <li><a href="#">Page 1-3</a></li>
           </ul>
         </li>
-        <li><a href="#">Page 2</a></li>
-        <li><a href="#">Page 3</a></li>
+        <li><a href="#"><?php print_r($menu['instrucciones'][$lang]) ?></a></li>
       </ul>
     </div>
   </div>
