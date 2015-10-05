@@ -11,6 +11,7 @@
 <body>
 
 <?php 
+//jgjhgfhjgsj
 $lang = "es";
 $menu = array(
 	"1"=>array(
