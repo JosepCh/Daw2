@@ -4,21 +4,24 @@
 	<title>Menú</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
 
 <?php 
-//jgjhgfhjgsj
 $lang = "es";
 $menu = array(
-	"1"=>array(
+	"titulo"=>array(
 		"es"=>"MathDice",
 		"eng"=>"MathDice"
 		),
-	"2"=>array(
+		"inicio"=>array(
+		  "es"=>"Inicio",
+		  "eng"=>"Home"
+		  ),
+	"juego"=>array(
 		"es"=>"Juego",
 		"eng" =>"Game",
 		"submenu"=>array(
@@ -31,7 +34,7 @@ $menu = array(
 				)
 			)
 		),
-	"3"=>array(
+	"instrucciones"=>array(
 		"eng"=>"Instructions",
 		"es"=>"Instrucciones"
 		)
@@ -42,9 +45,11 @@ $menu = array(
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-    <?php 
-    for($i =0;i<$menu.length;i++){?>
-      <a class="navbar-brand" href="#"><?php print_r($menu[i][$lang]);?></a>
+    	<?php 
+    	foreach($menu as $valor=>$key){
+    	}
+    	?>
+      <a class="navbar-brand" href="#"><?php $menu?></a>
     </div>
     <div>
       <ul class="nav navbar-nav">
