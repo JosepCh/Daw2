@@ -11,7 +11,7 @@
 <body>
 
 <?php 
-$lang = "en";
+$lang = "es";
 $menu = array(
 	"titulo"=>array(
 		"es"=>"MathDice",
@@ -25,7 +25,6 @@ $menu = array(
 		"es"=>"Juego",
 		"en" =>"Game",
 		"submenu"=>array(
-			"opciones"=>array(
 				"op1"=>array(
 					"en"=>"Low Difficulty",
 					"es"=>"Dificultad Baja"
@@ -38,7 +37,7 @@ $menu = array(
 					"en"=>"High Difficulty",
 					"es"=>"Dificultad Alta"
 					),
-				)
+				
 			)
 		),
 	"instrucciones"=>array(
@@ -53,8 +52,13 @@ $menu = array(
   <div class="container-fluid">
     <div class="navbar-header">
     	<?php 
-    	foreach($menu as $valor=>$key){
-    	}
+    	foreach($menu as $key=>$valor){
+    		if(isset($valor['submenu'])){
+    			foreach($valor as $key=>$opt){
+    					
+    			};
+    		};
+    	};
     	?>
       <a class="navbar-brand" href="#"><?php print_r($menu['titulo'][$lang]) ?></a>
     </div>
@@ -62,17 +66,11 @@ $menu = array(
       <ul class="nav navbar-nav">
         <li class="active"><a href="#"><?php print_r($menu['inicio'][$lang]) ?></a></li>
         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php print_r($menu['juego'][$lang]) ?> <span class="caret"></span></a>
-        <?php
-    					if(isset($menu['juego']['submenu'])!=null){
-    						foreach($menu['juego']['submenu'] as $opt=>$key2){
-    					}
-    					}
-    						?>
-    				  
+   
           <ul class="dropdown-menu">
-            <li><a href="#"><?php print_r($opt) ?></a></li>
-            <li><a href="#">Page 1-2</a></li>
-            <li><a href="#">Page 1-3</a></li>
+            <li><a href="#"><?php print_r($opt['op1'][$lang]) ?></a></li>
+            <li><a href="#"><?php print_r($opt['op2'][$lang]) ?></a></li>
+            <li><a href="#"><?php print_r($opt['op3'][$lang]) ?></a></li>
           </ul>
         </li>
         <li><a href="#"><?php print_r($menu['instrucciones'][$lang]) ?></a></li>
