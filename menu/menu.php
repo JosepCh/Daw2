@@ -11,7 +11,7 @@
 <body>
 
 <?php 
-$lang = "es";
+$lang = "en";
 $menu = array(
 	"titulo"=>array(
 		"es"=>"MathDice",
@@ -52,7 +52,9 @@ $menu = array(
   <div class="container-fluid">
     <div class="navbar-header">
     	<?php 
+    	//Por cada elemento que halla en el array menu lo metemos dentro de la variable $valor
     	foreach($menu as $key=>$valor){
+    		//Vemos si entre esos valores esta el valor 'submenu' y si existe lo recorremos y lo guardamos en $opt
     		if(isset($valor['submenu'])){
     			foreach($valor as $key=>$opt){
     					
