@@ -5,6 +5,6 @@
         $numero=rand(1,6);
         ?>
     </body>
-     <img src="img/sol<?php echo $numero?>.jpg"/>
+     <img src="img/dado<?php echo $numero?>.png"/>
 </html>
 
