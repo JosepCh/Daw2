@@ -1,8 +1,5 @@
-<!DOCTYPE html>
-<html>
-<body>
-
 <?php 
+require('funciones.php');
 $lang = "en";
 $menu = array(
 	"titulo"=>array(
@@ -84,6 +81,5 @@ $menu = array(
 </div>
 <br>
 <h5><strong>Dado Aleatorio :</strong></h5>
-
-</body>
-</html>
+<img src="img/dado<?php echo aleatorio(1,6);?>.png"/>
+<img src="img/dado<?php echo aleatorio(1,3);?>.png"/>
