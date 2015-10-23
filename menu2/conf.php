@@ -1,6 +1,6 @@
 <?php 
 require('funciones.php');
-$lang = "en";
+$lang = "es";
 $menu = array(
 	"titulo"=>array(
 		"es"=>"MathDice",
@@ -70,7 +70,9 @@ $menu = array(
   </div>
 </nav>
 
+<!--Ponemos un contenedor en el cual ponemos los 6 dados y los dados aleatorios-->
 <class="container-field">
+<!--Ponemos en cada fila una imagen de un dado dependiendo del valor de i-->
 	<div class="row">
 	<?php
 	for($i=1;$i<=6;$i++){?>
@@ -80,6 +82,7 @@ $menu = array(
 	?>
 </div>
 <br>
-<h5><strong>Dado Aleatorio :</strong></h5>
-<img src="img/dado<?php echo aleatorio(1,6);?>.png"/>
-<img src="img/dado<?php echo aleatorio(1,3);?>.png"/>
+<h5><strong>Dados Aleatorios :</strong></h5>
+<!--Llamamos a la funcion aleatorio que se encuentra en el fichero funciones.php y le pasamos los parametros que queramos-->
+<img src="img/dado<?php echo aleatorio(1,6);?>.png"/><!--Pintara un dado que vaya desde el 1 al 6-->
+<img src="img/dado<?php echo aleatorio(1,3);?>.png"/><!--Pintara un dado que vaya desde el 1 al 3-->

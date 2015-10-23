@@ -10,6 +10,7 @@
 </head>
     <body>
         <?php
+        //Llamamos al archivos conf.php que es el que tiene toda la información.
         require('conf.php');
         ?>
     </body>
