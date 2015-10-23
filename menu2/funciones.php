@@ -4,6 +4,7 @@
 function aleatorio($min,$max){
 //Cogemos los numeros que nos pasan y hacemos un random entre esos dos rangos que es el que luego usaremos en conf.php
 $numero=rand($min,$max);
+//Devolvemos el numero que nos ha dado el rand.
 return $numero;
 }
 
