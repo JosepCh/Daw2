@@ -51,11 +51,11 @@ $menu = array(
     		};
     	};
     	?>
-      <a class="navbar-brand" href="#"><?php print_r($menu['titulo'][$lang]) ?></a>
+      <a class="navbar-brand" href="index.php"><?php print_r($menu['titulo'][$lang]) ?></a>
     </div>
     <div>
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#"><?php print_r($menu['inicio'][$lang]) ?></a></li>
+        <li class="active"><a href="index.php"><?php print_r($menu['inicio'][$lang]) ?></a></li>
         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php print_r($menu['juego'][$lang]) ?> <span class="caret"></span></a>
    
           <ul class="dropdown-menu">

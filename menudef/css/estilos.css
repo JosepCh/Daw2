@@ -1,4 +1,6 @@
-.correcto
-{
-    color : #10ee7e;
+.dado{
+        border-radius: 29px 29px 29px 29px;
+        -moz-border-radius: 29px 29px 29px 29px;
+        -webkit-border-radius: 29px 29px 29px 29px;
+        border: 0px solid #000000;
 }
