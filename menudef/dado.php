@@ -46,12 +46,4 @@
 	  		 </form>
 		</div>
 	
-	
-	<div class="row">
-		<!--No funciona,implementare la función mas adelante!-->
-			<div class="col-md-2">
-				<button class="btn btn-primary" onclick='refrescarpagina()'>Refrescar Dados</button>
-			</div>
-	</div>
-	
 </div>
