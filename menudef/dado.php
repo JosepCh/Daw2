@@ -41,14 +41,17 @@
    			  				</div>
     		  		</div>
   	 		 		<div class="form-group"> 
-      						<button type="submit" class="btn btn-default" id="btn_comprobar">Comprobar</button>
+      						<button type="submit" class="btn btn-success" id="btn_comprobar">Comprobar</button>
   					</div>
 	  		 </form>
 		</div>
 	
 	
 	<div class="row">
-			<div class="col-md-2" onclick="index.php"><button class="btn btn-primary">Refrescar Dados</button></div>
+		<!--No funciona,implementare la función mas adelante!-->
+			<div class="col-md-2">
+				<button class="btn btn-primary" onclick='refrescarpagina()'>Refrescar Dados</button>
+			</div>
 	</div>
 	
 </div>
