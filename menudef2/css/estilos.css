@@ -1,0 +1,13 @@
+.dado{
+        border-radius: 29px 29px 29px 29px;
+        -moz-border-radius: 29px 29px 29px 29px;
+        -webkit-border-radius: 29px 29px 29px 29px;
+        border: 0px solid #000000;
+}
+.nombre,.apellidos,.titulo_reg,.edad{
+       color:orange;
+}
+.registro{
+        margin: 12em 0em 0em 35em;
+       text-align:center;
+}
