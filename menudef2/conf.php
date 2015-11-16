@@ -1,6 +1,6 @@
-<?php 
-require('funciones.php');
-$lang = "es";
+<?php
+function menu($idioma){
+$lang =$idioma;
 $menu = array(
 	"titulo"=>array(
 		"es"=>"MathDice",
@@ -65,4 +65,8 @@ $menu = array(
     </div>
   </div>
 </nav>
+<?php
+}
+?>
+
 
