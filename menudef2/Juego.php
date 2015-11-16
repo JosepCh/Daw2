@@ -61,21 +61,43 @@ class Juego{
 		</div>
 	
  		<div class="col-md-5 col-md-offset-1">
- 				<!--Formulario que envia los datos a receptor.php para que los maneje!-->
+ 				<!--Formulario que envia los datos a receptor.php para que los maneje
 			 <form class="form-horizontal" role="form" method="post" action="receptor.php">
    				 	<div class="form-group">
     						<label class="control-label titulo" for="dado1">Dado1:</label>
      						<input type="number" name="valor1" class="form-control" id="dado1" placeholder="Introduce número">
-     			<!--Input oculto que contiene el valor para poder hacer mejor las comparaciones despues!-->
+     			<!--Input oculto que contiene el valor para poder hacer mejor las comparaciones despues
      						<input type="hidden" value="<?php echo $valor1;?>" name="hidden"/>
    					</div>
     		 		<div class="form-group">
     						<label class="control-label titulo" for="dado2">Dado2:</label>
     						<input type="number" name="valor2" class="form-control" id="dado2" placeholder="Introduce número">
-    			<!--Input oculto que contiene el valor para poder hacer mejor las comparaciones despues!-->
+    			<!--Input oculto que contiene el valor para poder hacer mejor las comparaciones despues
     						<input type="hidden" value="<?php echo $valor2;?>" name="hidden2"/>
     		   		</div>
-    		   		<div class="form-group"> 
+    		   		!-->
+    		   		<div class="col-md-7 col-md-offset-2" id="resultados">
+						<label>Usuario: <?=$_SESSION['Jugador']->getNombre()." ".$_SESSION['Jugador']->getApellidos()."<br>Edad: ".$_SESSION['Jugador']->getEdad()?></label>
+						<table class="table">
+							<tr class="info">
+								<td><strong>Puntos:</strong></td>
+								<td></td>
+								<td><strong>0</strong></td>
+						    </tr>
+							<tr class="danger">
+								<td><strong>Puntos objetivo:</strong></td>
+								<td></td>
+								<td><strong>12</strong></td>
+							</tr>
+							<tr class="warning">
+								<td><strong>Intentos:</strong></td>
+								<td></td>
+								<td><strong>1</strong></td>
+							</tr>
+			
+						</table>
+					</div>
+    		   		<div class="col-md-5 form-group"> 
     		   			
      						<div class="radio">
      						<?php 
@@ -99,7 +121,7 @@ class Juego{
    			  				</div>
     		   				
     		  		</div>
-  	 		 		<div class="form-group"> 
+  	 		 		<div class="col-md-5 form-group"> 
       						<button type="submit" class="btn btn-success" id="btn_comprobar">Comprobar</button>
   					</div>
 	  		 </form>

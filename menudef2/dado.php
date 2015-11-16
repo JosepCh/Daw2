@@ -1,7 +1,6 @@
 <?php
 	require('cabecera.php');
 	require('conf.php');
-	require('funciones.php');
 	require('Jugador.php');
 	require('Juego.php');
 	session_start();
