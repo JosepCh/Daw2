@@ -21,7 +21,7 @@ class Juego{
   function aleatorio($min,$max){
     $numero=rand($min,$max);
     return $numero;
-  }
+}
   
   function pintarDados($tipo){
       ?>
@@ -44,19 +44,19 @@ class Juego{
 			</div>
   		</div>
 		<div class="col-md-2">
-			    <img class="dado" src="img/dado<?php echo $valor1;?>.png"/>
+			    <img class="dado" onclick="mostrar(<?php echo $valor1?>)" src="img/dado<?php echo $valor1;?>.png"/>
 		</div>
 			<div class="col-md-2">
-			    <img class="dado" src="img/dado<?php echo $valor2;?>.png"/>
+			    <img class="dado"onclick="mostrar(<?php echo $valor2?>)" src="img/dado<?php echo $valor2;?>.png"/>
 		</div>
 			<div class="col-md-2">
-			    <img class="dado" src="img/dado<?php echo $valor3;?>.png"/>
+			    <img class="dado" onclick="mostrar(<?php echo $valor3?>)" src="img/dado<?php echo $valor3;?>.png"/>
 		</div>
 			<div class="col-md-2">
-			    <img class="dado" src="img/dado<?php echo $valor4;?>.png"/>
+			    <img class="dado" onclick="mostrar(<?php echo $valor4?>)" src="img/dado<?php echo $valor4;?>.png"/>
 		</div>
 			<div class="col-md-2">
-			<img class="dado" src="img/dado<?php echo $valor5;?>.png"/>
+			<img class="dado" onclick="mostrar(<?php echo $valor5?>)" src="img/dado<?php echo $valor5;?>.png"/>
 			<br></br>
 		</div>
 	
@@ -112,16 +112,15 @@ class Juego{
     		   				<?php 
     		   				if($tipo==2){
     		   					?>
-    		   						<label class="titulo"><input type="radio" name="opciones" checked value="+">+</label>
-         							<label class="titulo"><input type="radio" name="opciones" value="-">-</label>
-         						
+    		   						<img src="img/suma.png" onclick="mostrar('hola')"></img>
+         							<img id="img1" src="img/resta.png"></img>
     		   					<?php
     		   				} 
     		   				?>
    			  				</div>
     		   				
     		  		</div>
-  	 		 		<div class="col-md-5 form-group"> 
+  	 		 		<div class="col-md-5 form-group col-md-offset-4"> 
       						<button type="submit" class="btn btn-success" id="btn_comprobar">Comprobar</button>
   					</div>
 	  		 </form>
@@ -129,6 +128,7 @@ class Juego{
 
 		<div class="col-md-2 col-md-offset-1">
 	  		 	<img src="img/dode<?php echo $valor6;?>.png"></img>
+		  		<input type="text" name="resultado" id="resultado"/>
 	  	 </div>	
 </div>
 <?php
