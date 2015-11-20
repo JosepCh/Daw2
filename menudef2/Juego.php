@@ -44,7 +44,7 @@ class Juego{
 			</div>
   		</div>
 		<div class="col-md-2">
-			    <img class="dado" onclick="mostrar(<?php echo $valor1?>)" src="img/dado<?php echo $valor1;?>.png"/>
+			    <img class="dado" id="dado1" onclick="dado1(<?php echo $valor1?>)" src="img/dado<?php echo $valor1;?>.png"/>
 		</div>
 			<div class="col-md-2">
 			    <img class="dado"onclick="mostrar(<?php echo $valor2?>)" src="img/dado<?php echo $valor2;?>.png"/>
