@@ -54,7 +54,7 @@ class Juego{
 					}
 		if($_SESSION['Jugador']->getPuntos()==$objetivo)
 		{
-			header('Location: resultado.php');
+			header('Location:resultado.php');
 		}
 		?>
 		
