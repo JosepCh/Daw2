@@ -11,7 +11,7 @@
 <body>
 
 <?php 
-$lang = "en";
+$lang = "es";
 $menu = array(
 	"titulo"=>array(
 		"es"=>"MathDice",

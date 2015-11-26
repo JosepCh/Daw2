@@ -4,30 +4,47 @@ include('Juego.php');
 
 session_start();
 
+/*Encargado de coger los datos del usuario y crear el Objeto Jugador y sino encuentra los datos obligatorios te redirige
+a la pagina principal hasta que no se rellene correctamente*/
 
 function inicio(){
         $_SESSION['Jugador'] = new Jugador();
         $_SESSION['Juego'] = new Juego();
-         if(isset($_POST['nombre'])!=''){
-             if(isset($_POST['opciones_juego'])){
-        $_SESSION['Jugador']->setNombre($_POST['nombre']);
-        $_SESSION['Jugador']->setApellidos($_POST['apellidos']);
-        $_SESSION['Jugador']->setEdad($_POST['edad']);
-       
-        $_SESSION['Juego']->setIdioma($_POST['opciones_idioma']); 
-        $_SESSION['Juego']->setTipo($_POST['opciones_juego']);
-         header('Location:dado.php');
-             }
-         }
-    
+            if(strlen($_POST['nombre'])!=0)
+            {
+                 if(isset($_POST['opciones_juego']))
+                {
+                    $_SESSION['Jugador']->setNombre($_POST['nombre']);
+                    $_SESSION['Jugador']->setApellidos($_POST['apellidos']);
+                    $_SESSION['Jugador']->setEdad($_POST['edad']);
+                    $_SESSION['Juego']->setTipo($_POST['opciones_juego']);
+                        if(isset($_POST['opciones_idioma']))
+                        {
+                            $_SESSION['Juego']->setIdioma($_POST['opciones_idioma']);
+                        }else
+                        {
+                            $_SESSION['Juego']->setIdioma('es');
+                            
+                        }
+                            header('Location:dado.php');
+                }else
+                {
+                    ?>
+                        <script type="text/javascript">
+                            alert('Falta el tipo de juego');
+                         </script>
+<?php
+                }
+            }
 ?>
 <div class="col-md-3 registro">
     <img src="./img/logo.png"></img>
         <form role="form" action="index.php" method="post">
             <fieldset class="schedule-border">
             <legend class="scehdule-border titulo">Introduzca sus datos</legend>
+            <h6>* : Campos Obligatorios</h6>
           <div class="form-group">
-               <label for="nombre" class="nombre">Nombre:</label>
+               <label for="nombre" class="nombre">* Nombre:</label>
                <input type="text" name="nombre" class="form-control" id="nombre">
           </div>
           
@@ -40,7 +57,7 @@ function inicio(){
                 <input type="number" name="edad" class="form-control" id="edad">
           </div>
           <div class ="form-group">
-             <h5 class="titulo2"><strong>Tipos de Juego :</strong></h5>
+             <h5 class="titulo2"><strong>* Tipos de Juego :</strong></h5>
           <label class="radio-inline lab_opc">
               <input type="radio" id="Junior" value="Junior" name="opciones_juego">Junior
           </label>
@@ -49,7 +66,7 @@ function inicio(){
           </label>
           </div>
           <div class ="form-group">
-              <h5 class="titulo2"><strong>Idiomas :</strong></h5>
+              <h5 class="titulo2"><strong> * Idiomas :</strong></h5>
                <label class="radio-inline lab_opc">
                   <input type="radio" id="Junior" value="es" name="opciones_idioma">Español
               </label>

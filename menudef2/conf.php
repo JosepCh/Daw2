@@ -56,8 +56,8 @@ $menu = array(
         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php print_r($menu['juego'][$lang]) ?> <span class="caret"></span></a>
    
           <ul class="dropdown-menu">
-            <li><a href="dado.php?tipo=2"><?php print_r($opt['op1'][$lang]) ?></a></li>
-            <li><a href="dado.php?tipo=1"><?php print_r($opt['op2'][$lang]) ?></a></li>
+            <li><a href="dado.php?tipo_juego=2"><?php print_r($opt['op1'][$lang]) ?></a></li>
+            <li><a href="dado.php?tipo_juego=1"><?php print_r($opt['op2'][$lang]) ?></a></li>
           </ul>
         </li>
         <li><a href="instrucciones.php"><?php print_r($menu['instrucciones'][$lang]) ?></a></li>

@@ -1,4 +1,7 @@
 <?php
+/*La clase Jugador es la encargada de almacenar todo lo que afecta al jugador(datos personales,puntuacion,puntos y tirada)
+Tiene getters y setters para poder modificar y acceder a los datos del jugador facilmente
+*/
 class Jugador
 {
     function Jugador(){}
@@ -31,6 +34,12 @@ class Jugador
    
    public function setPuntos($puntos){
        $this->puntos = $puntos;
+   }
+   public function getTirada(){
+       return $this->tirada;
+   }
+   public function setTirada($tirada){
+       $this->tirada = $tirada;
    }
 }
 ?>

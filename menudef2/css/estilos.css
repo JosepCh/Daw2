@@ -2,12 +2,10 @@ body{
     background-color : white;
 }
 
-
 .dado{
         border-radius: 29px 29px 29px 29px;
         -moz-border-radius: 29px 29px 29px 29px;
         -webkit-border-radius: 29px 29px 29px 29px;
-        border: 0px solid #000000;
 }
 .nombre,.apellidos,.titulo,.edad,.titulo2{
        color:red;
@@ -23,6 +21,13 @@ body{
     background-color : grey;
     color : white;
 }
-#img1{
-    margin-left :5px;
+#img{
+    width:72px;
+    height:72px;
+}
+#contenedor_resultados{
+    float:left;
+}
+.img_trof{
+   margin-left:200px;
 }
