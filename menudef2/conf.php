@@ -27,6 +27,10 @@ $menu = array(
 	"instrucciones"=>array(
 		"en"=>"Instructions",
 		"es"=>"Instrucciones"
+		),
+	"perfil"=>array(
+		"es"=>"Perfil",
+		"en"=>"Profile"
 		)
 	);
 
@@ -61,6 +65,7 @@ $menu = array(
           </ul>
         </li>
         <li><a href="instrucciones.php"><?php print_r($menu['instrucciones'][$lang]) ?></a></li>
+        <li><a href="perfil.php"><?php print_r($menu['perfil'][$lang]) ?></a></li>
       </ul>
     </div>
   </div>
