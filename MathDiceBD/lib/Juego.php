@@ -39,23 +39,7 @@ class Juego{
 				$valor4 = aleatorio(1,3);
 				$valor5 = aleatorio(1,3);
 				$valor6 = aleatorio(1,12);
-				$objetivo = 5;
-				/* Le asignamos una tirada al jugador que su valor lo recibe de logica.js y le envia un numero*/
-				$_SESSION['Jugador']->setTirada($_POST['hidden']);
-				/* Cogemos los puntos del jugador y si se cumple que su tirada es correcta le sumaremos 1 punto a su puntuacion*/
-				$puntuacion=$_SESSION['Jugador']->getPuntos();	
-					if($_POST['hidden']!=0)
-					{
-						if($_POST['hidden']!=0 && $_SESSION['Jugador']->getTirada()==$_POST['dodeca'])
-						{
-							$puntuacion++;
-							$_SESSION['Jugador']->setPuntos($puntuacion);	
-						}	
-					}
-		if($_SESSION['Jugador']->getPuntos()==$objetivo)
-		{
-			header('Location:resultado.php');
-		}
+			
 		?>
 		
 		<div class="col-md-1"></div>
@@ -97,7 +81,7 @@ class Juego{
 							<tr class="warning">
 								<td><strong>Objetivo:</strong></td>
 								<td></td>
-								<td><strong><?=$objetivo?></strong></td>
+								<td><strong>5</strong></td>
 							</tr>
 			
 						</table>

@@ -41,5 +41,13 @@ class Jugador
    public function setTirada($tirada){
        $this->tirada = $tirada;
    }
+   
+   public function getEmail(){
+       return $this->email;
+   }
+   
+   public function setEmail($email){
+       $this->email = $email;
+   }
 }
 ?>

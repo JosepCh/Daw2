@@ -1,5 +1,8 @@
 <?php
     include('lib/auth.php');
+    if(!isset($_SESSION['Jugador']) || strlen($_SESSION['Jugador']->getNombre())==0){ 
+		header('Location:index.php');
+	}
 	menu($_SESSION['Juego']->getIdioma());
 
 

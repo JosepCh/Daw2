@@ -7,7 +7,7 @@ body{
         -moz-border-radius: 29px 29px 29px 29px;
         -webkit-border-radius: 29px 29px 29px 29px;
 }
-.nombre,.apellidos,.titulo,.edad,.titulo2{
+.nombre,.apellidos,.titulo,.edad,.email,.titulo2{
        color:red;
 }
 .lab_opc{

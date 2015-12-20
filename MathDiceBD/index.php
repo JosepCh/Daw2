@@ -5,7 +5,6 @@
         session_start();
         session_destroy();
         require('lib/inicio.php');
-        var_dump($_SESSION['Jugador']);
         
      ?>
     <body>

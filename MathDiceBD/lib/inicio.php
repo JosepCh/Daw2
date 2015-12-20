@@ -24,6 +24,10 @@ function inicio(){
                 <label for="edad" class="edad">Edad:</label>
                 <input type="number" name="edad" class="form-control" id="edad">
           </div>
+           <div class="form-group">
+                <label for="email" class="email">Email:</label>
+                <input type="email" name="email" class="form-control" id="email">
+          </div>
           <div class ="form-group">
              <h5 class="titulo2"><strong>* Tipos de Juego :</strong></h5>
           <label class="radio-inline lab_opc">
