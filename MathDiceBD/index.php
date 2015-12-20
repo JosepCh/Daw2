@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <!--Es el encargado de pintar el formulario inicial y de cargar la cabecera!-->
+    <!--Es el encargado de pintar el formulario inicial!-->
     <?php
         session_start();
         session_destroy();

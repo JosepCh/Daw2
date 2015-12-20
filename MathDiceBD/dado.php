@@ -9,7 +9,7 @@
 	$tipo_juego = $_SESSION['Juego']->getTipo();
 	$objetivo=5;
 	
-			/* Le asignamos una tirada al jugador que su valor lo recibe de logica.js y le envia un numero*/
+		/* Le asignamos una tirada al jugador que su valor lo recibe de logica.js y le envia un numero*/
 		   $_SESSION['Jugador']->setTirada($_POST['hidden']);
 		/* Cogemos los puntos del jugador y si se cumple que su tirada es correcta le sumaremos 1 punto a su puntuacion*/
 				$puntuacion=$_SESSION['Jugador']->getPuntos();	
@@ -19,12 +19,14 @@
 						{
 							$puntuacion++;
 							$_SESSION['Jugador']->setPuntos($puntuacion);
+							//Actualizamos la puntuación del jugador en la base de datos
 							$bd->UpdateUser($_SESSION['Jugador']->getPuntos(),$_SESSION['Jugador']->getEmail());
 						}	
 					}
 					if($_SESSION['Jugador']->getPuntos()==$objetivo)
 					{
 						header('Location:resultado.php');
+						//Tras llegar al objetivo,reiniciamos los puntos a 0 para que vuelva a poder jugar.
 						$bd->UpdateUser($_SESSION['Jugador']->setPuntos(0),$_SESSION['Jugador']->getEmail());
 					}
 	

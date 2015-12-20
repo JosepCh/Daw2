@@ -1,5 +1,6 @@
 <?php
-
+/*Creamos un archivo que se encargue de controlar los usuarios(si existen o no en la base de datos)y gestionar los datos del
+jugador*/
 include('cabecera.php');
 include('conf.php');
 include('bd.php');
@@ -18,7 +19,9 @@ if(!isset($_SESSION['Jugador']) || strlen($_SESSION['Jugador']->getNombre())==0)
    
         $_SESSION['Jugador'] = new Jugador();
         $_SESSION['Juego'] = new Juego();
+        //Comprobamos si el jugador ya existe en la base de datos mediante el email
         if($bd_jugador=$bd->UserTest($_POST['email']))
+        //Si existe el jugador recojemos los datos que tenemos en la base de datos y se los ponemos al jugador.
     {
         if(isset($_POST['opciones_juego']))
         {
@@ -40,6 +43,7 @@ if(!isset($_SESSION['Jugador']) || strlen($_SESSION['Jugador']->getNombre())==0)
         
         
     }else{
+        //Por el contrario, si no existe crearemos un nuevo jugador en la base de datos con los datos nuevos.
         $bd->InsertarUser($_POST['nombre'],$_POST['apellidos'],$_POST['edad'],$_POST['email']);
             $_SESSION['Jugador'] = new Jugador();
             $_SESSION['Juego'] = new Juego();

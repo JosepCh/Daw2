@@ -1,4 +1,5 @@
 <?php   
+//Clase que tiene la conexión con la base de datos y el flujo de informacion sobre ella(insertar,comprobar y modificar datos),
 class BaseDatos
 {
 
