@@ -19,9 +19,9 @@ if(!isset($_SESSION['Jugador']) || strlen($_SESSION['Jugador']->getNombre())==0)
    
         $_SESSION['Jugador'] = new Jugador();
         $_SESSION['Juego'] = new Juego();
-        //Comprobamos si el jugador ya existe en la base de datos mediante el email
+        //Comprobamos si el jugador ya existe en la base de datos mediante el email 
         if($bd_jugador=$bd->UserTest($_POST['email']))
-        //Si existe el jugador recojemos los datos que tenemos en la base de datos y se los ponemos al jugador.
+        //Si existe el jugador recojemos los datos que tenemos en la base de datos(puntos y todo) y se los ponemos al jugador.
     {
         if(isset($_POST['opciones_juego']))
         {
