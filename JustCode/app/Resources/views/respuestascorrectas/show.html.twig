@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>RespuestasCorrectas</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ respuestasCorrecta.id }}</td>
+            </tr>
+            <tr>
+                <th>Respuestaok</th>
+                <td>{{ respuestasCorrecta.respuestaOk }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('respuestascorrectas_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('respuestascorrectas_edit', { 'id': respuestasCorrecta.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

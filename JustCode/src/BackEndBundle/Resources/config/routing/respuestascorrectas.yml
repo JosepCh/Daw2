@@ -1,0 +1,24 @@
+respuestascorrectas_index:
+    path:     /
+    defaults: { _controller: "BackEndBundle:RespuestasCorrectas:index" }
+    methods:  GET
+
+respuestascorrectas_show:
+    path:     /{id}/show
+    defaults: { _controller: "BackEndBundle:RespuestasCorrectas:show" }
+    methods:  GET
+
+respuestascorrectas_new:
+    path:     /new
+    defaults: { _controller: "BackEndBundle:RespuestasCorrectas:new" }
+    methods:  [GET, POST]
+
+respuestascorrectas_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BackEndBundle:RespuestasCorrectas:edit" }
+    methods:  [GET, POST]
+
+respuestascorrectas_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BackEndBundle:RespuestasCorrectas:delete" }
+    methods:  DELETE

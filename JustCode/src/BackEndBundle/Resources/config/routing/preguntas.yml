@@ -1,0 +1,24 @@
+preguntas_index:
+    path:     /
+    defaults: { _controller: "BackEndBundle:Preguntas:index" }
+    methods:  GET
+
+preguntas_show:
+    path:     /{id}/show
+    defaults: { _controller: "BackEndBundle:Preguntas:show" }
+    methods:  GET
+
+preguntas_new:
+    path:     /new
+    defaults: { _controller: "BackEndBundle:Preguntas:new" }
+    methods:  [GET, POST]
+
+preguntas_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BackEndBundle:Preguntas:edit" }
+    methods:  [GET, POST]
+
+preguntas_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BackEndBundle:Preguntas:delete" }
+    methods:  DELETE

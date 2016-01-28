@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>RespuestasCorrectas list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Respuestaok</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for respuestasCorrecta in respuestasCorrectas %}
+            <tr>
+                <td><a href="{{ path('respuestascorrectas_show', { 'id': respuestasCorrecta.id }) }}">{{ respuestasCorrecta.id }}</a></td>
+                <td>{{ respuestasCorrecta.respuestaOk }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('respuestascorrectas_show', { 'id': respuestasCorrecta.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('respuestascorrectas_edit', { 'id': respuestasCorrecta.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('respuestascorrectas_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

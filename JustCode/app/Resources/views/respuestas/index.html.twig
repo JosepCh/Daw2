@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Respuestas list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Enunciado</th>
+                <th>Id_Pregunta</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for respuesta in respuestas %}
+            <tr>
+                <td><a href="{{ path('respuestas_show', { 'id': respuesta.id }) }}">{{ respuesta.id }}</a></td>
+                <td>{{ respuesta.enunciado }}</td>
+                <td>{{ respuesta.incorrecta }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('respuestas_show', { 'id': respuesta.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('respuestas_edit', { 'id': respuesta.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('respuestas_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

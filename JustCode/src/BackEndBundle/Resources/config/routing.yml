@@ -1,0 +1,16 @@
+back_end_preguntas:
+    resource: "@BackEndBundle/Resources/config/routing/preguntas.yml"
+    prefix:   /preguntas
+    
+back_end_respuestas:
+        resource: "@BackEndBundle/Resources/config/routing/respuestas.yml"
+        prefix:   /respuestas
+        
+back_end_respuestascorrectas:
+        resource: "@BackEndBundle/Resources/config/routing/respuestascorrectas.yml"
+        prefix:   /respuestascorrectas
+    
+back_end_home:
+    path:    /
+    defaults: { _controller:BackEndBundle:Default:index}
+
